@@ -45,6 +45,7 @@ def run_browser_instance(config):
     if proxy:
         logger.info(f"使用代理: {proxy} 访问")
         launch_options["proxy"] = {"server": proxy, "bypass": "localhost, 127.0.0.1"}
+        launch_options["geoip"] = True
     # 无需禁用图片加载, 因为图片很少, 禁用还可能导致风控增加
     # launch_options["block_images"] = True
     
